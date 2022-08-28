@@ -15,6 +15,7 @@ import { db, storage } from "../firebase";
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import ButtonWithConfirm from "./ButtonWithConfirm";
+import lightTheme from "../styles/themes/lightTheme";
 
 const FirestoreListingItem = ({
     image,
@@ -73,7 +74,7 @@ const FirestoreListingItem = ({
             {!isExpanded ? (
                 <Box
                     sx={{
-                        border: "1px solid white",
+                        border: lightTheme.palette.custom.dark,
                         padding: ".5em",
                         margin: ".5em 0",
                         cursor: "pointer",
@@ -88,7 +89,7 @@ const FirestoreListingItem = ({
             ) : (
                 <Box
                     sx={{
-                        border: "1px solid white",
+                        border: lightTheme.palette.custom.dark,
                         padding: ".5em",
                         margin: ".5em 0",
                         display: "flex",

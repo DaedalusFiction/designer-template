@@ -7,6 +7,7 @@ import darkTheme from "../styles/themes/darkTheme";
 import "../styles/globals.css";
 import "../styles/fonts.css";
 import Layout from "../components/Layout";
+import lightTheme from "../styles/themes/lightTheme";
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -19,7 +20,7 @@ const MyApp = (props) => {
 
     return (
         <CacheProvider value={emotionCache}>
-            <ThemeProvider theme={darkTheme}>
+            <ThemeProvider theme={lightTheme}>
                 <CssBaseline />
                 <Layout>
                     <Component {...pageProps} />

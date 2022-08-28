@@ -19,37 +19,10 @@ let darkTheme = createTheme({
             darkMuted: "#ffffff",
         },
     },
-    typography: {
-        primary: {
-            // main: "CormorantGaramond",
-            // accent: "TitilliumWeb",
-        },
-    },
-    // components: {
-    //     MuiCssBaseline: {
-    //         styleOverrides: `
-
-    //     @font-face {
-    //       font-family: 'CormorantGaramond';
-    //       font-style: normal;
-    //       font-display: swap;
-    //       font-weight: 600;
-    //       src: local('CormorantGaramond'), local('CormorantGaramond-regular'), url('/fonts/CormorantGaramond-Light') format('truetype');
-    //     }
-    //     @font-face {
-    //       font-family: 'TitilliumWeb';
-    //       font-style: normal;
-    //       font-display: swap;
-    //       font-weight: 600;
-    //       src: local('TitilliumWeb'), local('TitilliumWeb'), url('/fonts/TitilliumWeb-SemiBold') format('truetype');
-    //     }
-    //   `,
-    //     },
-    // },
 });
 
 darkTheme = createTheme(darkTheme, {
-    border: "1px solid red",
+    border: `1px solid ${darkTheme.palette.custom.dark}`,
     custom: {
         spacing: {
             paragraph: "2rem",
