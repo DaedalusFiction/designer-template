@@ -19,38 +19,10 @@ let lightTheme = createTheme({
             lightMuted: "#ffffff",
         },
     },
-    // typography: {
-    //     primary: {
-    //         accent: "Yeseva",
-    //         decorative: "InconsolataRegular",
-    //         main: "InconsolataRegular",
-    //     },
-    // },
-    // components: {
-    //     MuiCssBaseline: {
-    //         styleOverrides: `
-
-    //     @font-face {
-    //       font-family: 'Yeseva';
-    //       font-style: normal;
-    //       font-display: swap;
-    //       font-weight: 600;
-    //       src: local('Yeseva'), local('Yeseva-regular'), url(${yeseva}) format('truetype');
-    //     }
-    //     @font-face {
-    //       font-family: 'inconsolataRegular';
-    //       font-style: normal;
-    //       font-display: swap;
-    //       font-weight: 600;
-    //       src: local('inconsolataRegular'), local('inconsolataRegular'), url(${inconsolataRegular}) format('truetype');
-    //     }
-    //   `,
-    //     },
-    // },
 });
 
 lightTheme = createTheme(lightTheme, {
-    border: "1px solid red",
+    border: `1px solid ${lightTheme.palette.custom.dark}`,
     custom: {
         spacing: {
             paragraph: "2rem",
@@ -59,45 +31,51 @@ lightTheme = createTheme(lightTheme, {
     },
     typography: {
         h1: {
-            // fontFamily: lightTheme.typography.lightTheme.accent,
-            color: lightTheme.palette.custom.dark,
+            fontFamily: "TitilliumWeb",
+            // color: darkTheme.palette.custom.dark,
+            fontWeight: "bold",
             lineHeight: ".85em",
+            margin: ".25em 0",
             fontSize: "clamp(3.5rem, 9vw, 7rem)",
         },
         h2: {
-            // fontFamily: lightTheme.typography.lightTheme.accent,
-            color: lightTheme.palette.custom.dark,
+            fontFamily: "TitilliumWeb",
+            // color: darkTheme.palette.custom.dark,
+            fontWeight: "bold",
             fontSize: "clamp(3rem, 4vw, 10rem)",
         },
         h3: {
-            // fontFamily: lightTheme.typography.lightTheme.accent,
-            color: lightTheme.palette.custom.dark,
+            fontFamily: "TitilliumWeb",
+            // color: darkTheme.palette.custom.dark,
         },
-        h5: {
-            // color: lightTheme.palette.text.secondary,
-            fontWeight: "bold",
+        h4: {
+            fontFamily: "TitilliumWeb",
+            // color: darkTheme.palette.custom.dark,
         },
-        h6: {
-            fontWeight: "bold",
-        },
+
         subtitle1: {
+            fontFamily: "CormorantGaramond",
             color: lightTheme.palette.custom.darkMuted,
-            fontSize: "1rem",
+            fontSize: "1.25rem",
         },
         subtitle2: {
+            fontFamily: "CormorantGaramond",
+            fontSize: "1.25rem",
             color: lightTheme.palette.custom.darkMuted,
         },
         body1: {
-            fontSize: "1rem",
-            lineHeight: "1rem",
+            fontFamily: "CormorantGaramond",
+            fontSize: "1.25rem",
+            lineHeight: "1.25rem",
             color: lightTheme.palette.custom.darkMuted,
-            // fontFamily: lightTheme.typography.lightTheme.main,
+            // fontFamily: darkTheme.typography.darkTheme.main,
         },
         body2: {
-            fontSize: "1rem",
-            lineHeight: "1rem",
-            // color: lightTheme.palette.custom.decorative,
-            // fontFamily: lightTheme.typography.lightTheme.decorative,
+            fontFamily: "CormorantGaramond",
+            fontSize: "1.25rem",
+            lineHeight: "1.25rem",
+            // color: darkTheme.palette.custom.decorative,
+            // fontFamily: darkTheme.typography.darkTheme.decorative,
         },
     },
     components: {

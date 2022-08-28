@@ -14,8 +14,8 @@ import lightTheme from "../styles/themes/lightTheme";
 import { useState } from "react";
 import { navigateToTop } from "../utility/navigateToTop";
 
-const pages = ["about", "clothing", "artwork"];
-const artistName = "SHANDON BLACK";
+const pages = ["clothing", "artwork", "about"];
+const artistName = "DESIGNER TEMPLATE";
 
 const activeStyle = {
     color: lightTheme.palette.custom.light,
@@ -58,7 +58,11 @@ const Header = () => {
                                     mr: 1,
                                 }}
                             >
-                                <Typography sx={{ textTransform: "uppercase" }}>
+                                <Typography
+                                    variant="h4"
+                                    component="p"
+                                    sx={{ textTransform: "uppercase" }}
+                                >
                                     <Link href="/">{artistName}</Link>
                                 </Typography>
                                 {/* <img

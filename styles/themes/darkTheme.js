@@ -22,7 +22,7 @@ let darkTheme = createTheme({
 });
 
 darkTheme = createTheme(darkTheme, {
-    border: `1px solid ${darkTheme.palette.custom.dark}`,
+    border: `1px solid ${darkTheme.palette.custom.light}`,
     custom: {
         spacing: {
             paragraph: "2rem",

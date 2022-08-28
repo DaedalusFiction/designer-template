@@ -74,7 +74,7 @@ const FirestoreListingItem = ({
             {!isExpanded ? (
                 <Box
                     sx={{
-                        border: lightTheme.palette.custom.dark,
+                        border: lightTheme.border,
                         padding: ".5em",
                         margin: ".5em 0",
                         cursor: "pointer",
@@ -89,7 +89,7 @@ const FirestoreListingItem = ({
             ) : (
                 <Box
                     sx={{
-                        border: lightTheme.palette.custom.dark,
+                        border: lightTheme.border,
                         padding: ".5em",
                         margin: ".5em 0",
                         display: "flex",
