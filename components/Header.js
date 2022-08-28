@@ -7,19 +7,19 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import logo from "../assets/images/logo.png";
 import { Slide, useScrollTrigger } from "@mui/material";
 import Link from "next/link";
 import lightTheme from "../styles/themes/lightTheme";
 import { useState } from "react";
 import { navigateToTop } from "../utility/navigateToTop";
 
-const pages = ["clothing", "artwork", "about"];
+const pages = ["gallery", "about"];
 const artistName = "DESIGNER TEMPLATE";
 
 const activeStyle = {
     color: lightTheme.palette.custom.light,
 };
+
 const inactiveStyle = {
     color: lightTheme.palette.custom.lightMuted,
 };
@@ -65,11 +65,6 @@ const Header = () => {
                                 >
                                     <Link href="/">{artistName}</Link>
                                 </Typography>
-                                {/* <img
-                                    src={logo}
-                                    className="logo"
-                                    alt="nautilus shell"
-                                /> */}
                             </Box>
                         </Link>
                         <Box
@@ -160,8 +155,7 @@ const Header = () => {
                                         margin: "0 1em",
                                         "&:hover": {
                                             color: lightTheme.palette.custom
-                                                .light,
-                                            textDecoration: "underline",
+                                                .dark,
                                         },
                                     }}
                                 >

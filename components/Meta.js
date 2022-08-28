@@ -1,12 +1,20 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
-const artist = "DESIGNER TEMPLATE";
+const title = "Designer Portfolio";
 
 const Meta = () => {
+    const router = useRouter();
     return (
         <div>
             <Head>
-                <title>{artist}</title>
+                {router.pathname === "/" ? (
+                    <title>{title}</title>
+                ) : (
+                    <title>{`${title} - ${router.pathname
+                        .replace("/", "")
+                        .toUpperCase()}`}</title>
+                )}
                 <meta
                     name="keywords"
                     content="art, design, photography, living space, interior decorating"

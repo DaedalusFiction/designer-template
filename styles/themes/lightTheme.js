@@ -50,10 +50,12 @@ lightTheme = createTheme(lightTheme, {
         },
         h4: {
             fontFamily: "TitilliumWeb",
+            fontSize: "1.75rem",
             // color: darkTheme.palette.custom.dark,
         },
         h5: {
             fontFamily: "CormorantGaramond",
+            fontSize: "1.25rem",
             // color: darkTheme.palette.custom.dark,
         },
 

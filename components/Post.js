@@ -16,11 +16,12 @@ const Post = () => {
     useEffect(() => {
         async function getImage() {
             const imageRef = doc(db, category, params.id);
-            console.log("ID", params.id);
             const getTask = await getDoc(imageRef);
             setImage(getTask.data());
         }
-        getImage();
+        if (params.id) {
+            getImage();
+        }
     }, [params.id, category, router.pathname]);
     return (
         <Box>

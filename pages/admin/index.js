@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Head from "next/head";
@@ -8,8 +8,8 @@ import { db } from "../../firebase.js";
 import FirebaseUploadForm from "../../components/FirebaseUploadForm.js";
 import FirestoreListing from "../../components/FirestoreListing.js";
 
-const artConfig = {
-    category: "artwork",
+const galleryConfig = {
+    category: "gallery",
     fields: [
         { name: "Title", type: "text", value: "" },
         {
@@ -20,27 +20,25 @@ const artConfig = {
             rows: 4,
         },
         { name: "Year", type: "number", value: "" },
-        { name: "Price", type: "number", value: "" },
-        { name: "Medium", type: "text", value: "" },
     ],
 };
 
-const clothingConfig = {
-    category: "clothing",
-    fields: [
-        { name: "Title", type: "text", value: "" },
-        {
-            name: "Description",
-            type: "text",
-            value: "",
-            multiline: true,
-            rows: 4,
-        },
-        { name: "Year", type: "number", value: "" },
-        { name: "Price", type: "number", value: "" },
-        { name: "Medium", type: "text", value: "" },
-    ],
-};
+// const clothingConfig = {
+//     category: "clothing",
+//     fields: [
+//         { name: "Title", type: "text", value: "" },
+//         {
+//             name: "Description",
+//             type: "text",
+//             value: "",
+//             multiline: true,
+//             rows: 4,
+//         },
+//         { name: "Year", type: "number", value: "" },
+//         { name: "Price", type: "number", value: "" },
+//         { name: "Medium", type: "text", value: "" },
+//     ],
+// };
 
 const Admin = () => {
     const [isAdmin, setIsAdmin] = useState(false);
@@ -59,7 +57,7 @@ const Admin = () => {
     };
 
     return (
-        <>
+        <Container maxWidth="xl">
             <Head>
                 <meta
                     name="keywords"
@@ -84,28 +82,15 @@ const Admin = () => {
                     <Grid container spacing={2}>
                         <Grid item xs={12} md={6}>
                             <FirebaseUploadForm
-                                config={artConfig}
+                                config={galleryConfig}
                                 updateCounter={updateCounter}
                                 setUpdateCounter={setUpdateCounter}
                             />
                         </Grid>
-                        <Grid item xs={12} md={6}>
-                            <FirebaseUploadForm
-                                config={clothingConfig}
-                                updateCounter={updateCounter}
-                                setUpdateCounter={setUpdateCounter}
-                            />
-                        </Grid>
+
                         <Grid item xs={12} md={6}>
                             <FirestoreListing
-                                category="artwork"
-                                updateCounter={updateCounter}
-                                setUpdateCounter={setUpdateCounter}
-                            />
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                            <FirestoreListing
-                                category="clothing"
+                                category="gallery"
                                 updateCounter={updateCounter}
                                 setUpdateCounter={setUpdateCounter}
                             />
@@ -119,7 +104,7 @@ const Admin = () => {
                     </Typography>
                 )}
             </Box>
-        </>
+        </Container>
     );
 };
 

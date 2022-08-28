@@ -9,7 +9,7 @@ const artist = "DESIGNER TEMPLATE";
 export default function Home() {
     return (
         <div>
-            <Meta />
+            <Meta title={artist} />
             <Hero />
         </div>
     );

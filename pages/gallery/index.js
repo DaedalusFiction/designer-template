@@ -1,36 +1,31 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { collection, getDocs } from "firebase/firestore";
 import Head from "next/head";
 import React from "react";
 import Gallery from "../../components/Gallery";
+import Meta from "../../components/Meta";
 import { db } from "../../firebase";
 
-const Art = ({ images }) => {
+const PhotoGallery = ({ images }) => {
     return (
-        <>
-            <Head>
-                <meta
-                    name="keywords"
-                    content="art, portfolio, photography, clothing"
-                />
-                <title>Shandon Black - Art</title>
-            </Head>
+        <Container maxWidth="xl">
+            <Meta />
             <Box>
                 <Typography variant="h1" sx={{ margin: ".5rem 0" }}>
-                    Artwork
+                    Gallery
                 </Typography>
                 <Typography sx={{ paddingBottom: "2em" }}>
-                    UNIQUE PIECES OF ART
+                    UNIQUELY CRAFTED LIVING SPACES
                 </Typography>
             </Box>
             <br />
             <Gallery images={images} category="artwork" />
-        </>
+        </Container>
     );
 };
 
 export const getStaticProps = async () => {
-    const docsSnap = await getDocs(collection(db, "artwork"));
+    const docsSnap = await getDocs(collection(db, "gallery"));
     let images = [];
     docsSnap.docs.forEach((doc, index) => {
         images = [...images, doc.data()];
@@ -43,4 +38,4 @@ export const getStaticProps = async () => {
     };
 };
 
-export default Art;
+export default PhotoGallery;

@@ -1,21 +1,15 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { collection, getDocs } from "firebase/firestore";
-import Head from "next/head";
 import React from "react";
 import Gallery from "../../components/Gallery";
+import Meta from "../../components/Meta";
 import { db } from "../../firebase";
 
 const clothing = ({ images }) => {
     return (
         <>
-            <Head>
-                <meta
-                    name="keywords"
-                    content="art, portfolio, photography, clothing"
-                />
-                <title>Shandon Black - Wearable Sculptures</title>
-            </Head>
+            <Meta title="Designer Template" />
             <Box>
                 <Typography variant="h1" sx={{ margin: ".5rem 0" }}>
                     Wearable Sculptures

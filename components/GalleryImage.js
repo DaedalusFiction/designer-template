@@ -1,7 +1,6 @@
 import { Box } from "@mui/system";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Grid, Typography } from "@mui/material";
 import Link from "next/link";
 
 const GalleryImage = ({ image }) => {
