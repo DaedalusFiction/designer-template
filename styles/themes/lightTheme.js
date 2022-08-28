@@ -36,7 +36,7 @@ lightTheme = createTheme(lightTheme, {
             fontWeight: "bold",
             lineHeight: ".85em",
             margin: ".25em 0",
-            fontSize: "clamp(3.5rem, 9vw, 7rem)",
+            fontSize: "clamp(3.5rem, 5vw, 7rem)",
         },
         h2: {
             fontFamily: "TitilliumWeb",
@@ -50,6 +50,10 @@ lightTheme = createTheme(lightTheme, {
         },
         h4: {
             fontFamily: "TitilliumWeb",
+            // color: darkTheme.palette.custom.dark,
+        },
+        h5: {
+            fontFamily: "CormorantGaramond",
             // color: darkTheme.palette.custom.dark,
         },
 
