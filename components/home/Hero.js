@@ -2,12 +2,13 @@ import { Box, Button, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import Link from "next/link";
 import homeStyles from "../../styles/Home.module.css";
+import lightTheme from "../../styles/themes/lightTheme";
 
 const heroImage = "/images/hero.jpg";
 
 const pages = [
+    { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
-    { name: "Gallery", href: "/gallery" },
 ];
 
 const Hero = () => {
@@ -21,32 +22,66 @@ const Hero = () => {
                 backgroundPosition: "50% 5%",
             }}
         >
-            <Box
-                className="flex-1 p-1"
-                sx={{ justifyContent: "space-between" }}
-            >
-                <Box className="flex-1" sx={{ alignItems: "end" }}>
-                    <Typography variant="h4" component="p">
-                        <Link href="/about">Designer Portfolio</Link>
-                    </Typography>
-                    {pages.map((page) => {
-                        return (
-                            <Typography
-                                key={page.name}
-                                variant="h5"
-                                component="p"
-                            >
-                                <Link href={page.href}>{page.name}</Link>
-                            </Typography>
-                        );
-                    })}
+            <Container maxWidth="xl">
+                <Box
+                    sx={{
+                        justifyContent: "space-between",
+                        padding: ".5em 0",
+                        display: { xs: "none", md: "flex" },
+                    }}
+                >
+                    <Box
+                        sx={{
+                            display: { xs: "none", md: "flex" },
+                            alignItems: "center",
+                            gap: "1em",
+                        }}
+                    >
+                        <Typography
+                            variant="h4"
+                            component="p"
+                            sx={{ color: lightTheme.palette.custom.light }}
+                        >
+                            <Link href="/about">DESIGNER TEMPLATE</Link>
+                        </Typography>
+                        {pages.map((page) => {
+                            return (
+                                <Typography
+                                    key={page.name}
+                                    variant="h5"
+                                    component="p"
+                                    sx={{
+                                        color: lightTheme.palette.custom
+                                            .lightMuted,
+                                        "&:hover": {
+                                            color: lightTheme.palette.custom
+                                                .light,
+                                        },
+                                    }}
+                                >
+                                    <Link href={page.href}>{page.name}</Link>
+                                </Typography>
+                            );
+                        })}
+                    </Box>
+                    <Button variant="outlined">Get Started</Button>
                 </Box>
-                <Button variant="outlined">Get Started</Button>
-            </Box>
+            </Container>
             <Container maxWidth="lg">
                 <Box sx={{ padding: "30vh 0" }}>
-                    <Typography variant="h1">Designer Template</Typography>
-                    <Typography variant="h5">
+                    <Typography
+                        variant="h1"
+                        sx={{
+                            marginBottom: ".25em",
+                            color: lightTheme.palette.custom.light,
+                        }}
+                    >
+                        Designer Template
+                    </Typography>
+                    <Typography
+                        variant="h5"
+                        sx={{ color: lightTheme.palette.custom.lightMuted }}
+                    >
                         Make the most of your living space
                     </Typography>
                     <Box sx={{ display: "flex", gap: ".5em", margin: "1em 0" }}>

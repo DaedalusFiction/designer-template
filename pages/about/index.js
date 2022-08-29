@@ -1,11 +1,11 @@
-import { Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Head from "next/head";
 import React from "react";
 
 const about = () => {
     return (
-        <div>
+        <Container maxWidth="xl">
             <Head>
                 <title>Shandon Black - About</title>
                 <meta name="keywords" content="photography, art, clothing" />
@@ -54,7 +54,7 @@ const about = () => {
                     </Grid>
                 </Grid>
             </Box>
-        </div>
+        </Container>
     );
 };
 

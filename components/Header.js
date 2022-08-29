@@ -13,7 +13,7 @@ import lightTheme from "../styles/themes/lightTheme";
 import { useState } from "react";
 import { navigateToTop } from "../utility/navigateToTop";
 
-const pages = ["gallery", "about"];
+const pages = ["projects", "about"];
 const artistName = "DESIGNER TEMPLATE";
 
 const activeStyle = {
@@ -130,7 +130,7 @@ const Header = () => {
                                 fontSize: "1.75rem",
                                 flexGrow: 1,
                                 fontWeight: 700,
-                                color: lightTheme.palette.custom.light,
+                                color: lightTheme.palette.custom.darkMuted,
                             }}
                         >
                             <Link href="/" style={{ color: "inherit" }}>

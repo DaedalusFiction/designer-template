@@ -1,17 +1,1 @@
-.hero h1,
-.hero h5,
-.hero p {
-    color: white;
-}
 
-.hero p {
-    color: rgb(202, 202, 202) !important;
-}
-
-.hero p :hover {
-    color: white;
-}
-
-.white {
-    color: white;
-}

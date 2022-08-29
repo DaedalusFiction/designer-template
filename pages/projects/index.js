@@ -1,18 +1,17 @@
 import { Box, Container, Typography } from "@mui/material";
 import { collection, getDocs } from "firebase/firestore";
-import Head from "next/head";
 import React from "react";
 import Gallery from "../../components/Gallery";
 import Meta from "../../components/Meta";
 import { db } from "../../firebase";
 
-const PhotoGallery = ({ images }) => {
+const Projects = ({ images }) => {
     return (
         <Container maxWidth="xl">
             <Meta />
             <Box>
                 <Typography variant="h1" sx={{ margin: ".5rem 0" }}>
-                    Gallery
+                    Projects
                 </Typography>
                 <Typography sx={{ paddingBottom: "2em" }}>
                     UNIQUELY CRAFTED LIVING SPACES
@@ -38,4 +37,4 @@ export const getStaticProps = async () => {
     };
 };
 
-export default PhotoGallery;
+export default Projects;

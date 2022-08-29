@@ -9,7 +9,7 @@ import FirebaseUploadForm from "../../components/FirebaseUploadForm.js";
 import FirestoreListing from "../../components/FirestoreListing.js";
 
 const galleryConfig = {
-    category: "gallery",
+    category: "projects",
     fields: [
         { name: "Title", type: "text", value: "" },
         {
