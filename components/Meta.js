@@ -21,14 +21,14 @@ const Meta = () => {
                 />
                 <link
                     rel="preload"
-                    href="/fonts/CormorantGaramond-Light.ttf"
+                    href="/fonts/EBGaramond-VariableFont_wght.ttf"
                     as="font"
                     crossOrigin=""
                     type="truetype"
                 />
                 <link
                     rel="preload"
-                    href="/fonts/TitilliumWeb-SemiBold.ttf"
+                    href="/fonts/Raleway-VariableFont_wght.ttf"
                     as="font"
                     crossOrigin=""
                     type="truetype"

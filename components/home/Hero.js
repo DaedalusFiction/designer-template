@@ -76,7 +76,7 @@ const Hero = () => {
                             color: lightTheme.palette.custom.light,
                         }}
                     >
-                        Designer Template
+                        DESIGNER TEMPLATE
                     </Typography>
                     <Typography
                         variant="h5"
