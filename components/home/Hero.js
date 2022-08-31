@@ -16,7 +16,6 @@ const Hero = () => {
   url(${heroImage})`,
                 backgroundSize: "cover",
                 backgroundPosition: "50% 5%",
-                marginBottom: "3rem",
             }}
         >
             <Container maxWidth="xl">

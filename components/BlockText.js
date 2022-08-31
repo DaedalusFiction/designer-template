@@ -11,6 +11,7 @@ const BlockText = ({ text }) => {
                 flexDirection: "column",
                 alignItems: "center",
                 gap: "1rem",
+                backgroundColor: text.backgroundColor,
             }}
         >
             <Typography

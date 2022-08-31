@@ -5,6 +5,8 @@
 // 4. Projects
 // 5. About
 
+import lightTheme from "./styles/themes/lightTheme";
+
 // 1. Meta
 
 const siteName = "DESIGNER TEMPLATE";
@@ -44,12 +46,62 @@ const servicesPreviewContent = [
 ];
 
 const blockTextOne = {
-    title: "CARVE YOUR NICHE",
+    backgroundColor: "white",
+    title: "BLOCK TEXT ONE",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
+};
+const blockTextTwo = {
+    backgroundColor: "white",
+    title: "BLOCK TEXT TWO",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
+};
+const blockTextThree = {
+    backgroundColor: lightTheme.palette.background.accent,
+    title: "BLOCK TEXT THREE",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
 };
 
 const mosaicSectionContentOne = {
-    title: "Mosaic Section",
+    backgroundColor: lightTheme.palette.background.accent,
+    title: "Mosaic Section One",
+    content:
+        "This is the mosaic section content. Here you can describe whatever you like about your service and the button below can link to any page in this website or any external site.",
+    button: {
+        text: "learn more",
+        href: "/about",
+        variant: "contained",
+    },
+    images: [
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+    ],
+};
+const mosaicSectionContentTwo = {
+    backgroundColor: "white",
+    title: "Mosaic Section Two",
+    content:
+        "This is the mosaic section content. Here you can describe whatever you like about your service and the button below can link to any page in this website or any external site.",
+    button: {
+        text: "learn more",
+        href: "/about",
+        variant: "contained",
+    },
+    images: [
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+        { url: "/images/hero.jpg", alt: "alt hero text" },
+    ],
+};
+const mosaicSectionContentThree = {
+    backgroundColor: "white",
+    title: "Mosaic Section Three",
     content:
         "This is the mosaic section content. Here you can describe whatever you like about your service and the button below can link to any page in this website or any external site.",
     button: {
@@ -68,7 +120,7 @@ const mosaicSectionContentOne = {
 };
 const blockPhotoContentOne = {
     title: "BLOCK PHOTO TITLE",
-    content: "Block Photo Content",
+    content: "Block Photo One",
     button: {
         text: "Button Text",
         href: "/about",
@@ -80,8 +132,12 @@ const blockPhotoContentOne = {
 export {
     siteName,
     pages,
-    servicesPreviewContent,
-    mosaicSectionContentOne,
-    blockPhotoContentOne,
     blockTextOne,
+    blockTextTwo,
+    blockTextThree,
+    blockPhotoContentOne,
+    mosaicSectionContentOne,
+    mosaicSectionContentTwo,
+    mosaicSectionContentThree,
+    servicesPreviewContent,
 };

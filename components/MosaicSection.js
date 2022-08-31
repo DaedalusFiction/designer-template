@@ -6,7 +6,10 @@ import Mosaic from "./Mosaic";
 
 const MosaicSection = ({ mosaicSectionContent, reverse, variation }) => {
     return (
-        <Box className="section">
+        <Box
+            className="section"
+            sx={{ backgroundColor: mosaicSectionContent.backgroundColor }}
+        >
             <Container maxWidth="xl">
                 <Grid
                     container

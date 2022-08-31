@@ -9,10 +9,14 @@ import MosaicSection from "../components/MosaicSection";
 
 import {
     siteName,
-    servicesPreviewContent,
     blockTextOne,
-    mosaicSectionContentOne,
+    blockTextTwo,
+    blockTextThree,
     blockPhotoContentOne,
+    mosaicSectionContentOne,
+    mosaicSectionContentTwo,
+    mosaicSectionContentThree,
+    servicesPreviewContent,
 } from "../siteInfo";
 
 export default function Home() {
@@ -25,17 +29,17 @@ export default function Home() {
                 mosaicSectionContent={mosaicSectionContentOne}
                 variation={1}
             />
-            <BlockText text={blockTextOne} />
+            <BlockText text={blockTextTwo} />
+            <BlockPhoto blockPhotoContent={blockPhotoContentOne} reversed />
             <ServicesPreview servicesPreviewContent={servicesPreviewContent} />
-            <BlockPhoto blockPhotoContent={blockPhotoContentOne} />
+            <BlockText text={blockTextThree} />
             <MosaicSection
                 reverse
-                mosaicSectionContent={mosaicSectionContentOne}
+                mosaicSectionContent={mosaicSectionContentTwo}
                 variation={2}
             />
-            <BlockText text={blockTextOne} />
             <MosaicSection
-                mosaicSectionContent={mosaicSectionContentOne}
+                mosaicSectionContent={mosaicSectionContentThree}
                 variation={3}
             />
         </div>
