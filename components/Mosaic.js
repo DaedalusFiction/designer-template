@@ -3,8 +3,6 @@ import { Box } from "@mui/system";
 import React from "react";
 import MosaicImage from "./MosaicImage";
 
-const smallSquareSize = "12vw";
-
 const variation1 = (images) => {
     return (
         <Grid container spacing={2}>
@@ -157,7 +155,7 @@ const Mosaic = ({ variation, images }) => {
         case 3:
             return variation3(images);
         default:
-            return <div>Remember to input a variation</div>;
+            return <div>Remember to input a variation prop (1, 2, or 3)</div>;
     }
 };
 
