@@ -1,15 +1,15 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-const Meta = ({ artist }) => {
+const Meta = ({ siteName }) => {
     const router = useRouter();
     return (
         <div>
             <Head>
                 {router.pathname === "/" ? (
-                    <title>{artist}</title>
+                    <title>{siteName}</title>
                 ) : (
-                    <title>{`${artist} - ${router.pathname
+                    <title>{`${siteName} - ${router.pathname
                         .replace("/", "")
                         .toUpperCase()}`}</title>
                 )}

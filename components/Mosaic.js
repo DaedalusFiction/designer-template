@@ -30,7 +30,7 @@ const variation1 = (images) => {
                     <MosaicImage
                         image={images[2]}
                         height="20rem"
-                        width="20rem"
+                        width="100%"
                     />
                 </Box>
             </Grid>

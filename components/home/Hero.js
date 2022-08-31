@@ -3,13 +3,9 @@ import { Container } from "@mui/system";
 import Link from "next/link";
 import homeStyles from "../../styles/Home.module.css";
 import lightTheme from "../../styles/themes/lightTheme";
+import { pages, siteName } from "../../siteInfo";
 
 const heroImage = "/images/hero.jpg";
-
-const pages = [
-    { name: "Projects", href: "/projects" },
-    { name: "About", href: "/about" },
-];
 
 const Hero = () => {
     return (
@@ -42,7 +38,7 @@ const Hero = () => {
                             component="p"
                             sx={{ color: lightTheme.palette.custom.light }}
                         >
-                            <Link href="/about">DESIGNER TEMPLATE</Link>
+                            <Link href="/about">{siteName}</Link>
                         </Typography>
                         {pages.map((page) => {
                             return (
@@ -50,6 +46,7 @@ const Hero = () => {
                                     key={page.name}
                                     variant="h5"
                                     component="p"
+                                    className="nav-link"
                                     sx={{
                                         color: lightTheme.palette.custom
                                             .lightMuted,
@@ -76,7 +73,7 @@ const Hero = () => {
                             color: lightTheme.palette.custom.light,
                         }}
                     >
-                        DESIGNER TEMPLATE
+                        {siteName}
                     </Typography>
                     <Typography
                         variant="h5"

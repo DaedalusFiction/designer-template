@@ -12,9 +12,7 @@ import Link from "next/link";
 import lightTheme from "../styles/themes/lightTheme";
 import { useState } from "react";
 import { navigateToTop } from "../utility/navigateToTop";
-
-const pages = ["projects", "about"];
-const artistName = "DESIGNER TEMPLATE";
+import { pages, siteName } from "../siteInfo";
 
 const activeStyle = {
     color: lightTheme.palette.custom.light,
@@ -58,12 +56,8 @@ const Header = () => {
                                     mr: 1,
                                 }}
                             >
-                                <Typography
-                                    variant="h4"
-                                    component="p"
-                                    sx={{ textTransform: "uppercase" }}
-                                >
-                                    <Link href="/">{artistName}</Link>
+                                <Typography variant="h4" component="p">
+                                    <Link href="/">{siteName}</Link>
                                 </Typography>
                             </Box>
                         </Link>
@@ -107,11 +101,11 @@ const Header = () => {
                                             navigateToTop();
                                             handleCloseNavMenu();
                                         }}
-                                        key={page}
+                                        key={index}
                                     >
                                         <Typography textAlign="center">
-                                            <Link href={`/${page}`}>
-                                                {page}
+                                            <Link href={page.href}>
+                                                {page.name}
                                             </Link>
                                         </Typography>
                                     </MenuItem>
@@ -134,7 +128,7 @@ const Header = () => {
                             }}
                         >
                             <Link href="/" style={{ color: "inherit" }}>
-                                {artistName}
+                                {siteName}
                             </Link>
                         </Typography>
                         <Box
@@ -143,15 +137,15 @@ const Header = () => {
                                 display: { xs: "none", md: "flex" },
                             }}
                         >
-                            {pages.map((page) => (
+                            {pages.map((page, index) => (
                                 <Typography
-                                    key={page}
+                                    className="nav-link"
+                                    key={index}
                                     onClick={() => {
                                         navigateToTop();
                                     }}
                                     //separate styling because can't get NavLink working with hover
                                     sx={{
-                                        textTransform: "uppercase",
                                         margin: "0 1em",
                                         "&:hover": {
                                             color: lightTheme.palette.custom
@@ -160,14 +154,14 @@ const Header = () => {
                                     }}
                                 >
                                     <Link
-                                        href={`/${page}`}
+                                        href={page.href}
                                         style={({ isActive }) =>
                                             isActive
                                                 ? activeStyle
                                                 : inactiveStyle
                                         }
                                     >
-                                        {page}
+                                        {page.name}
                                     </Link>
                                 </Typography>
                             ))}
