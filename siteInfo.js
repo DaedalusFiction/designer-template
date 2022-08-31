@@ -66,11 +66,22 @@ const mosaicSectionContentOne = {
         { url: "/images/hero.jpg", alt: "alt hero text" },
     ],
 };
+const blockPhotoContentOne = {
+    title: "BLOCK PHOTO TITLE",
+    content: "Block Photo Content",
+    button: {
+        text: "Button Text",
+        href: "/about",
+        variant: "contained",
+    },
+    image: { url: "/images/hero.jpg", alt: "alt hero text" },
+};
 
 export {
     siteName,
     pages,
     servicesPreviewContent,
     mosaicSectionContentOne,
+    blockPhotoContentOne,
     blockTextOne,
 };

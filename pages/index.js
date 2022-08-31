@@ -1,5 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import BlockPhoto from "../components/BlockPhoto";
 import BlockText from "../components/BlockText";
 import Hero from "../components/home/Hero";
 import ServicesPreview from "../components/home/ServicesPreview";
@@ -11,6 +12,7 @@ import {
     servicesPreviewContent,
     blockTextOne,
     mosaicSectionContentOne,
+    blockPhotoContentOne,
 } from "../siteInfo";
 
 export default function Home() {
@@ -25,7 +27,7 @@ export default function Home() {
             />
             <BlockText text={blockTextOne} />
             <ServicesPreview servicesPreviewContent={servicesPreviewContent} />
-            <BlockText text={blockTextOne} />
+            <BlockPhoto blockPhotoContent={blockPhotoContentOne} />
             <MosaicSection
                 reverse
                 mosaicSectionContent={mosaicSectionContentOne}

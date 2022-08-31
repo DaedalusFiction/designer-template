@@ -11,6 +11,7 @@ let lightTheme = createTheme({
         mode: "light",
         background: {
             default: "#ffffff",
+            accent: "#ffeccd",
         },
         custom: {
             dark: "#000000",

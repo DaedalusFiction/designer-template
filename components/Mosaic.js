@@ -83,7 +83,10 @@ const variation2 = (images) => {
 
             <Grid item xs={12} lg={7}>
                 <Box sx={{ display: { xs: "none", lg: "flex" } }}>
-                    <Box className="flex-1" sx={{ flexDirection: "column" }}>
+                    <Box
+                        className="flex-1"
+                        sx={{ flexDirection: "column", width: "100%" }}
+                    >
                         <Box className="flex-1" sx={{ alignItems: "end" }}>
                             <MosaicImage
                                 image={images[3]}
