@@ -6,16 +6,21 @@ import MosaicImage from "./MosaicImage";
 const variation1 = (images) => {
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} lg={4}>
                 <Box
                     className="flex-1"
                     sx={{
-                        display: "flex",
                         flexDirection: "column",
                         alignItems: "end",
                     }}
                 >
-                    <Box className="flex-1" sx={{ justifyContent: "end" }}>
+                    <Box
+                        sx={{
+                            display: { xs: "none", lg: "flex" },
+                            justifyContent: "end",
+                            gap: "1em",
+                        }}
+                    >
                         <MosaicImage
                             image={images[0]}
                             height="6rem"
@@ -27,6 +32,7 @@ const variation1 = (images) => {
                             width="6rem"
                         />
                     </Box>
+
                     <MosaicImage
                         image={images[2]}
                         height="20rem"
@@ -34,11 +40,25 @@ const variation1 = (images) => {
                     />
                 </Box>
             </Grid>
-            <Grid item xs={12} md={3}>
-                <MosaicImage image={images[3]} width="100%" height="100%" />
+            <Grid item xs={12} lg={3}>
+                <Box
+                    sx={{
+                        height: "100%",
+                        width: "100%",
+                        display: { xs: "none", lg: "flex" },
+                    }}
+                >
+                    <MosaicImage image={images[3]} width="100%" height="100%" />
+                </Box>
             </Grid>
-            <Grid item xs={12} md={5}>
-                <Box className="flex-1" sx={{ flexDirection: "column" }}>
+            <Grid item xs={12} lg={5}>
+                <Box
+                    sx={{
+                        display: { xs: "none", lg: "flex" },
+                        gap: "1em",
+                        flexDirection: "column",
+                    }}
+                >
                     <MosaicImage
                         image={images[3]}
                         width="100%"
@@ -57,43 +77,31 @@ const variation1 = (images) => {
 const variation2 = (images) => {
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12} md={5}>
-                <Box
-                    className="flex-1"
-                    sx={{
-                        display: "flex",
-                        justifyContent: "end",
-                        // alignItems: "end",
-                        height: "100%",
-                    }}
-                >
-                    <MosaicImage
-                        image={images[2]}
-                        height="20rem"
-                        width="20rem"
-                    />
-                </Box>
+            <Grid item xs={12} lg={5}>
+                <MosaicImage image={images[0]} height="20rem" width="100%" />
             </Grid>
 
-            <Grid item xs={12} md={7}>
-                <Box className="flex-1" sx={{ flexDirection: "column" }}>
-                    <Box className="flex-1" sx={{ alignItems: "end" }}>
+            <Grid item xs={12} lg={7}>
+                <Box sx={{ display: { xs: "none", lg: "flex" } }}>
+                    <Box className="flex-1" sx={{ flexDirection: "column" }}>
+                        <Box className="flex-1" sx={{ alignItems: "end" }}>
+                            <MosaicImage
+                                image={images[3]}
+                                width="10rem"
+                                height="16rem"
+                            />
+                            <MosaicImage
+                                image={images[3]}
+                                width="10rem"
+                                height="10rem"
+                            />
+                        </Box>
                         <MosaicImage
                             image={images[3]}
-                            width="10rem"
-                            height="16rem"
-                        />
-                        <MosaicImage
-                            image={images[3]}
-                            width="10rem"
+                            width="100%"
                             height="10rem"
                         />
                     </Box>
-                    <MosaicImage
-                        image={images[3]}
-                        width="100%"
-                        height="10rem"
-                    />
                 </Box>
             </Grid>
         </Grid>
@@ -102,45 +110,57 @@ const variation2 = (images) => {
 const variation3 = (images) => {
     return (
         <Grid container spacing={2}>
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} lg={3}>
                 <Box
-                    className="flex-1"
                     sx={{
-                        display: "flex",
+                        display: { xs: "none", lg: "flex" },
                         justifyContent: "end",
-                        flexDirection: "column",
                         alignItems: "end",
+                        gap: "1em",
                         height: "100%",
                     }}
                 >
-                    <MosaicImage
-                        image={images[2]}
-                        height="10rem"
-                        width="10rem"
-                    />
-                    <MosaicImage
-                        image={images[2]}
-                        height="10rem"
-                        width="10rem"
-                    />
+                    <Box
+                        className="flex-1"
+                        sx={{
+                            display: "flex",
+                            justifyContent: "end",
+                            flexDirection: "column",
+                            alignItems: "end",
+                            height: "100%",
+                        }}
+                    >
+                        <MosaicImage
+                            image={images[2]}
+                            height="10rem"
+                            width="10rem"
+                        />
+                        <MosaicImage
+                            image={images[2]}
+                            height="10rem"
+                            width="10rem"
+                        />
+                    </Box>
                 </Box>
             </Grid>
 
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} lg={6}>
                 <MosaicImage image={images[3]} width="100%" height="26rem" />
             </Grid>
-            <Grid item xs={12} md={3}>
-                <Box className="flex-1" sx={{ flexDirection: "column" }}>
-                    <MosaicImage
-                        image={images[3]}
-                        width="10rem"
-                        height="10rem"
-                    />
-                    <MosaicImage
-                        image={images[3]}
-                        width="10rem"
-                        height="10rem"
-                    />
+            <Grid item xs={12} lg={3}>
+                <Box sx={{ display: { xs: "none", lg: "flex" } }}>
+                    <Box className="flex-1" sx={{ flexDirection: "column" }}>
+                        <MosaicImage
+                            image={images[3]}
+                            width="10rem"
+                            height="10rem"
+                        />
+                        <MosaicImage
+                            image={images[3]}
+                            width="10rem"
+                            height="10rem"
+                        />
+                    </Box>
                 </Box>
             </Grid>
         </Grid>

@@ -5,12 +5,12 @@ import React from "react";
 const BlockText = ({ text }) => {
     return (
         <Box
+            className="section"
             sx={{
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
                 gap: "1rem",
-                padding: "6rem 0",
             }}
         >
             <Typography

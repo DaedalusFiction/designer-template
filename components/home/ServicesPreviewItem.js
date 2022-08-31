@@ -23,6 +23,7 @@ const ServicesPreviewItem = ({ service }) => {
                     {service.description}
                 </Typography>
                 <br />
+                <br />
                 <Box className="flex-1" sx={{ justifyContent: "center" }}>
                     <Link href="/about">
                         <Button

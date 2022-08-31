@@ -6,14 +6,14 @@ import Mosaic from "./Mosaic";
 
 const MosaicSection = ({ mosaicSectionContent, reverse, variation }) => {
     return (
-        <Box sx={{ padding: "6rem 0" }}>
+        <Box className="section">
             <Container maxWidth="xl">
                 <Grid
                     container
                     spacing={6}
                     wrap={reverse ? "wrap-reverse" : "wrap"}
                 >
-                    <Grid item xs={12} lg={5} order={reverse ? "1" : "0"}>
+                    <Grid item xs={12} lg={4} order={reverse ? "1" : "0"}>
                         <Box
                             className="flex-1"
                             sx={{
@@ -28,7 +28,10 @@ const MosaicSection = ({ mosaicSectionContent, reverse, variation }) => {
                                     display: "flex",
                                     flexDirection: "column",
                                     justifyContent: "center",
-                                    alignItems: reverse ? "start" : "end",
+                                    alignItems: {
+                                        xs: "center",
+                                        lg: reverse ? "start" : "end",
+                                    },
                                 }}
                             >
                                 <Typography
@@ -69,7 +72,7 @@ const MosaicSection = ({ mosaicSectionContent, reverse, variation }) => {
                             </Box>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} lg={7} order={reverse ? "0" : "1"}>
+                    <Grid item xs={12} lg={8} order={reverse ? "0" : "1"}>
                         <Mosaic
                             images={mosaicSectionContent.images}
                             variation={variation}
