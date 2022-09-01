@@ -6,8 +6,8 @@ import { leadProfile, secondaryProfiles } from "../../siteInfo";
 const index = () => {
     return (
         <Box className="section">
-            <Container maxWidth="lg">
-                <Typography variant="h1">Studio</Typography>
+            <Container maxWidth="xl">
+                <Typography variant="h1">SERVICES</Typography>
                 <br />
                 <br />
                 <Grid container spacing={6}>

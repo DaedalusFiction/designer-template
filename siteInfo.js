@@ -187,25 +187,60 @@ const secondaryProfiles = [
     {
         image: { url: "/images/hero.jpg", alt: "alt hero text" },
         name: "Designer One",
-        description:
+        content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.",
     },
     {
         image: { url: "/images/hero.jpg", alt: "alt hero text" },
         name: "Designer Two",
-        description:
+        content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
     },
     {
         image: { url: "/images/hero.jpg", alt: "alt hero text" },
         name: "Designer Three",
-        description:
+        content:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nDolore ipsa sed asperiores voluptatibus nam modi.",
     },
 ];
-
 // 7. About
 // 8. Contact
+// 9. Process
+
+const processSteps = [
+    {
+        title: "Step Title",
+        name: "STEP ONE",
+        content:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.",
+        image: { url: "/images/hero.jpg", alt: "alt hero text" },
+        reverse: false,
+    },
+    {
+        title: "Step Title",
+        name: "STEP TWO",
+        content:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+        image: { url: "/images/hero.jpg", alt: "alt hero text" },
+        reverse: true,
+    },
+    {
+        title: "Step Title",
+        name: "STEP THREE",
+        content:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nDolore ipsa sed asperiores voluptatibus nam modi.",
+        image: { url: "/images/hero.jpg", alt: "alt hero text" },
+        reverse: false,
+    },
+    {
+        title: "Step Title",
+        name: "STEP FOUR",
+        content:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.",
+        image: { url: "/images/hero.jpg", alt: "alt hero text" },
+        reverse: true,
+    },
+];
 
 export {
     siteName,
@@ -223,4 +258,5 @@ export {
     servicesPreviewContent,
     leadProfile,
     secondaryProfiles,
+    processSteps,
 };

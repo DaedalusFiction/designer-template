@@ -1,14 +1,12 @@
 import { Box, Container, Typography } from "@mui/material";
 import { collection, getDocs } from "firebase/firestore";
 import React from "react";
-import Gallery from "../../components/Gallery";
-import Meta from "../../components/Meta";
+import Gallery from "../../components/gallery/Gallery";
 import { db } from "../../firebase";
 
 const Projects = ({ images }) => {
     return (
         <Container maxWidth="xl">
-            <Meta />
             <Box>
                 <Typography variant="h1" sx={{ margin: ".5rem 0" }}>
                     Projects
