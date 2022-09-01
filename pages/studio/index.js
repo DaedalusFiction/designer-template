@@ -2,14 +2,12 @@ import { Box, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import MosaicImage from "../../components/MosaicImage";
 import { leadProfile, secondaryProfiles } from "../../siteInfo";
+import PageLayout from "../../components/layout/PageLayout";
 
 const index = () => {
     return (
-        <Box className="section">
-            <Container maxWidth="lg">
-                <Typography variant="h1">Studio</Typography>
-                <br />
-                <br />
+        <PageLayout name="THE STUDIO">
+            <Box className="section">
                 <Grid container spacing={6}>
                     <Grid item xs={12} md={6}>
                         <MosaicImage
@@ -47,8 +45,8 @@ const index = () => {
                         );
                     })}
                 </Grid>
-            </Container>
-        </Box>
+            </Box>
+        </PageLayout>
     );
 };
 

@@ -1,186 +1,71 @@
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
-import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
-import MenuItem from "@mui/material/MenuItem";
-import { Button, Slide, useScrollTrigger } from "@mui/material";
+import { Button, Typography } from "@mui/material";
+import { Box, Container } from "@mui/system";
 import Link from "next/link";
+import { pages, header, siteName } from "../../siteInfo";
 import lightTheme from "../../styles/themes/lightTheme";
-import { useState } from "react";
-import { navigateToTop } from "../../utility/navigateToTop";
-import { pages, siteName, header } from "../../siteInfo";
 
-const activeStyle = {
-    color: lightTheme.palette.custom.light,
-};
-
-const inactiveStyle = {
-    color: lightTheme.palette.custom.lightMuted,
-};
-
-const Header = () => {
-    const [anchorElNav, setAnchorElNav] = useState(null);
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 0,
-    });
-
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-
-    const handleCloseNavMenu = (e) => {
-        setAnchorElNav(null);
-    };
-
+const Header = ({ light }) => {
     return (
-        <Slide
-            direction="down"
-            in={trigger}
-            sx={{ position: "fixed", top: "0", zIndex: "10" }}
-        >
-            <AppBar position="static">
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters>
-                        <Link href="/">
-                            <Box
-                                onClick={() => {
-                                    navigateToTop();
-                                }}
+        <Container maxWidth="xl">
+            <Box
+                sx={{
+                    justifyContent: "space-between",
+                    padding: ".5em 0",
+                    display: { xs: "none", md: "flex" },
+                }}
+            >
+                <Box
+                    sx={{
+                        display: { xs: "none", md: "flex" },
+                        alignItems: "center",
+                        gap: "1.5em",
+                    }}
+                >
+                    <Typography
+                        variant="h4"
+                        component="p"
+                        sx={{
+                            color: light
+                                ? lightTheme.palette.custom.light
+                                : lightTheme.palette.custom.dark,
+                        }}
+                    >
+                        <Link href="/about">{siteName}</Link>
+                    </Typography>
+                    {pages.map((page) => {
+                        return (
+                            <Typography
+                                key={page.name}
+                                variant="h5"
+                                component="p"
+                                className="nav-link"
                                 sx={{
-                                    display: { xs: "none", md: "flex" },
-                                    mr: 1,
+                                    color: light
+                                        ? lightTheme.palette.custom.lightMuted
+                                        : lightTheme.palette.custom.darkMuted,
+                                    "&:hover": {
+                                        color: light
+                                            ? lightTheme.palette.custom.light
+                                            : lightTheme.palette.custom.dark,
+                                    },
                                 }}
                             >
-                                <Typography variant="h4" component="p">
-                                    <Link href="/">{siteName}</Link>
-                                </Typography>
-                            </Box>
-                        </Link>
-                        <Box
-                            sx={{
-                                flexGrow: 1,
-                                display: { xs: "flex", md: "none" },
-                            }}
-                        >
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
-                                color="inherit"
-                            >
-                                <MenuIcon />
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: "bottom",
-                                    horizontal: "left",
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: "top",
-                                    horizontal: "left",
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    display: { xs: "block", md: "none" },
-                                }}
-                            >
-                                {pages.map((page, index) => (
-                                    <MenuItem
-                                        onClick={() => {
-                                            navigateToTop();
-                                            handleCloseNavMenu();
-                                        }}
-                                        key={index}
-                                    >
-                                        <Typography textAlign="center">
-                                            <Link href={page.href}>
-                                                {page.name}
-                                            </Link>
-                                        </Typography>
-                                    </MenuItem>
-                                ))}
-                            </Menu>
-                        </Box>
-                        <Typography
-                            variant="h3"
-                            noWrap
-                            onClick={() => {
-                                navigateToTop();
-                            }}
-                            sx={{
-                                mr: 2,
-                                display: { xs: "flex", md: "none" },
-                                fontSize: "1.75rem",
-                                flexGrow: 1,
-                                fontWeight: 700,
-                                color: lightTheme.palette.custom.darkMuted,
-                            }}
-                        >
-                            <Link href="/" style={{ color: "inherit" }}>
-                                {siteName}
-                            </Link>
-                        </Typography>
-                        <Box
-                            sx={{
-                                flexGrow: 1,
-                                display: { xs: "none", md: "flex" },
-                                justifyContent: "space-between",
-                            }}
-                        >
-                            <Box sx={{ display: "flex", alignItems: "center" }}>
-                                {pages.map((page, index) => (
-                                    <Typography
-                                        className="nav-link"
-                                        key={index}
-                                        onClick={() => {
-                                            navigateToTop();
-                                        }}
-                                        //separate styling because can't get NavLink working with hover
-                                        sx={{
-                                            margin: "0 1em",
-                                            "&:hover": {
-                                                color: lightTheme.palette.custom
-                                                    .dark,
-                                            },
-                                        }}
-                                    >
-                                        <Link
-                                            href={page.href}
-                                            style={({ isActive }) =>
-                                                isActive
-                                                    ? activeStyle
-                                                    : inactiveStyle
-                                            }
-                                        >
-                                            {page.name}
-                                        </Link>
-                                    </Typography>
-                                ))}
-                            </Box>
-                            <Link href={header.buttonOne.href}>
-                                <Button
-                                    color="secondary"
-                                    variant={header.buttonOne.variant}
-                                >
-                                    {header.buttonOne.text}
-                                </Button>
-                            </Link>
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-        </Slide>
+                                <Link href={page.href}>{page.name}</Link>
+                            </Typography>
+                        );
+                    })}
+                </Box>
+                <Link href={header.buttonOne.href}>
+                    <Button
+                        variant={header.buttonOne.variant}
+                        color={light ? "primary" : "secondary"}
+                    >
+                        {header.buttonOne.text}
+                    </Button>
+                </Link>
+            </Box>
+        </Container>
     );
 };
+
 export default Header;

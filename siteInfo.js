@@ -16,6 +16,7 @@ const siteName = "DESIGNER TEMPLATE";
 
 const pages = [
     { name: "PROJECTS", href: "/projects" },
+    { name: "THE PROCESS", href: "/process" },
     { name: "SERVICES", href: "/services" },
     { name: "STUDIO", href: "/studio" },
     { name: "CONTACT", href: "/contact" },
@@ -23,7 +24,7 @@ const pages = [
 
 // 2. Layout
 
-const header = {
+const navbar = {
     buttonOne: {
         text: "Get Started",
         href: "https://fictionalweb.com",
@@ -31,6 +32,13 @@ const header = {
     },
 };
 
+const header = {
+    buttonOne: {
+        variant: "outlined",
+        href: "https://fictionalweb.com",
+        text: "Get Started",
+    },
+};
 // 3. Home
 
 const heroContent = {
@@ -38,11 +46,6 @@ const heroContent = {
     secondaryText: "Created by FictionalWeb.com",
     buttonOne: {
         variant: "outlined",
-        href: "https://fictionalweb.com",
-        text: "Get Started",
-    },
-    buttonTwo: {
-        variant: "contained",
         href: "https://fictionalweb.com",
         text: "Explore",
     },
@@ -179,7 +182,7 @@ const blockPhotoContentTwo = {
 const leadProfile = {
     image: { url: "/images/hero.jpg", alt: "alt hero text" },
     name: "Lead Designer",
-    description:
+    content:
         "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda. Laboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.\n\nDolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nLorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda. Laboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.\n\nDolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
 };
 
@@ -245,6 +248,7 @@ const processSteps = [
 export {
     siteName,
     pages,
+    navbar,
     header,
     heroContent,
     blockTextOne,

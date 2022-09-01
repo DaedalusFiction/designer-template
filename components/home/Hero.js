@@ -3,6 +3,7 @@ import { Container } from "@mui/system";
 import Link from "next/link";
 import lightTheme from "../../styles/themes/lightTheme";
 import { pages, siteName, heroContent } from "../../siteInfo";
+import Header from "../layout/Header";
 
 const heroImage = "/images/hero.jpg";
 
@@ -16,56 +17,7 @@ const Hero = () => {
                 backgroundPosition: "50% 5%",
             }}
         >
-            <Container maxWidth="xl">
-                <Box
-                    sx={{
-                        justifyContent: "space-between",
-                        padding: ".5em 0",
-                        display: { xs: "none", md: "flex" },
-                    }}
-                >
-                    <Box
-                        sx={{
-                            display: { xs: "none", md: "flex" },
-                            alignItems: "center",
-                            gap: "1em",
-                        }}
-                    >
-                        <Typography
-                            variant="h4"
-                            component="p"
-                            sx={{ color: lightTheme.palette.custom.light }}
-                        >
-                            <Link href="/about">{siteName}</Link>
-                        </Typography>
-                        {pages.map((page) => {
-                            return (
-                                <Typography
-                                    key={page.name}
-                                    variant="h5"
-                                    component="p"
-                                    className="nav-link"
-                                    sx={{
-                                        color: lightTheme.palette.custom
-                                            .lightMuted,
-                                        "&:hover": {
-                                            color: lightTheme.palette.custom
-                                                .light,
-                                        },
-                                    }}
-                                >
-                                    <Link href={page.href}>{page.name}</Link>
-                                </Typography>
-                            );
-                        })}
-                    </Box>
-                    <Link href={heroContent.buttonOne.href}>
-                        <Button variant={heroContent.buttonOne.variant}>
-                            {heroContent.buttonOne.text}
-                        </Button>
-                    </Link>
-                </Box>
-            </Container>
+            <Header light />
             <Container maxWidth="lg">
                 <Box sx={{ padding: "30vh 0" }}>
                     <Typography
@@ -95,12 +47,12 @@ const Hero = () => {
                             justifyContent: { xs: "center", md: "left" },
                         }}
                     >
-                        <Link href={heroContent.buttonTwo.href}>
+                        <Link href={heroContent.buttonOne.href}>
                             <Button
                                 size="large"
-                                variant={heroContent.buttonTwo.variant}
+                                variant={heroContent.buttonOne.variant}
                             >
-                                {heroContent.buttonTwo.text}
+                                {heroContent.buttonOne.text}
                             </Button>
                         </Link>
                     </Box>
