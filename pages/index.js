@@ -30,7 +30,7 @@ export default function Home() {
                 variation={1}
             />
             <BlockText text={blockTextTwo} />
-            <BlockPhoto blockPhotoContent={blockPhotoContentOne} reversed />
+            <BlockPhoto blockPhotoContent={blockPhotoContentOne} reverse />
             <ServicesPreview servicesPreviewContent={servicesPreviewContent} />
             <BlockText text={blockTextThree} />
             <MosaicSection

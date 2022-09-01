@@ -56,13 +56,13 @@ const blockTextTwo = {
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
 };
 const blockTextThree = {
-    backgroundColor: lightTheme.palette.background.accent,
+    backgroundColor: lightTheme.palette.background.accentLight,
     title: "BLOCK TEXT THREE",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
 };
 
 const mosaicSectionContentOne = {
-    backgroundColor: lightTheme.palette.background.accent,
+    backgroundColor: lightTheme.palette.background.accentLight,
     title: "Mosaic Section One",
     content:
         "This is the mosaic section content. Here you can describe whatever you like about your service and the button below can link to any page in this website or any external site.",
@@ -119,6 +119,7 @@ const mosaicSectionContentThree = {
     ],
 };
 const blockPhotoContentOne = {
+    background: lightTheme.palette.background.accentLight,
     title: "BLOCK PHOTO TITLE",
     content: "Block Photo One",
     button: {

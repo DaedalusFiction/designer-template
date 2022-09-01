@@ -28,6 +28,7 @@ const BlockText = ({ text }) => {
                 sx={{
                     textAlign: "center",
                     maxWidth: "35ch",
+                    fontSize: { xs: "2rem", md: "3rem" },
                 }}
             >
                 {text.body}

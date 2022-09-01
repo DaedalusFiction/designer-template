@@ -71,17 +71,28 @@ const Hero = () => {
                         sx={{
                             marginBottom: ".25em",
                             color: lightTheme.palette.custom.light,
+                            textAlign: { xs: "center", md: "left" },
                         }}
                     >
                         {siteName}
                     </Typography>
                     <Typography
                         variant="h5"
-                        sx={{ color: lightTheme.palette.custom.lightMuted }}
+                        sx={{
+                            color: lightTheme.palette.custom.lightMuted,
+                            textAlign: { xs: "center", md: "left" },
+                        }}
                     >
                         Make the most of your living space
                     </Typography>
-                    <Box sx={{ display: "flex", gap: ".5em", margin: "1em 0" }}>
+                    <Box
+                        sx={{
+                            display: "flex",
+                            gap: ".5em",
+                            margin: "1em 0",
+                            justifyContent: { xs: "center", md: "left" },
+                        }}
+                    >
                         <Button variant="contained">Learn More</Button>
                     </Box>
                 </Box>

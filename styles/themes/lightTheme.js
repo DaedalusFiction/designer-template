@@ -11,7 +11,8 @@ let lightTheme = createTheme({
         mode: "light",
         background: {
             default: "#ffffff",
-            accent: "#ffeccd",
+            accentLight: "#ffeccd",
+            accentDark: "#ffeccd",
         },
         custom: {
             dark: "#000000",
@@ -34,25 +35,25 @@ lightTheme = createTheme(lightTheme, {
         h1: {
             fontFamily: "Raleway",
             // color: darkTheme.palette.custom.dark,
-            fontWeight: "200",
+            fontWeight: "400",
             lineHeight: ".85em",
             fontSize: "clamp(3.5rem, 5vw, 7rem)",
         },
         h2: {
             fontFamily: "Raleway",
-            fontWeight: "200",
+            fontWeight: "400",
             // color: darkTheme.palette.custom.dark,
             fontSize: "clamp(3rem, 4vw, 10rem)",
         },
         h3: {
             fontFamily: "Raleway",
-            fontWeight: "200",
+            fontWeight: "400",
             // color: darkTheme.palette.custom.dark,
         },
         h4: {
             fontFamily: "Raleway",
             fontSize: "1.75rem",
-            fontWeight: "200",
+            fontWeight: "400",
             // color: darkTheme.palette.custom.dark,
         },
         h5: {

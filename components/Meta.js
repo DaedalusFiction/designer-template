@@ -22,14 +22,14 @@ const Meta = ({ siteName }) => {
                     href="/fonts/EBGaramond-VariableFont_wght.ttf"
                     as="font"
                     crossOrigin=""
-                    type="truetype"
+                    type="font/truetype"
                 />
                 <link
                     rel="preload"
                     href="/fonts/Raleway-VariableFont_wght.ttf"
                     as="font"
                     crossOrigin=""
-                    type="truetype"
+                    type="font/truetype"
                 />
             </Head>
         </div>
