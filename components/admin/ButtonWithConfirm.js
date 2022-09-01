@@ -7,8 +7,8 @@ import DialogTitle from "@mui/material/DialogTitle";
 import { deleteDoc, doc } from "firebase/firestore";
 import { deleteObject, ref } from "firebase/storage";
 import { useState } from "react";
-import { db, storage } from "../firebase";
-import Notification from "./Notification";
+import { db, storage } from "../../firebase";
+import Notification from "../Notification";
 
 export default function ButtonWithConfirm({
     buttonText,

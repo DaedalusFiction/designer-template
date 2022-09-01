@@ -1,9 +1,12 @@
 // Table of Contents:
 // 1. Meta
-// 2. Home
-// 3. Services
-// 4. Projects
-// 5. About
+// 2. Layout
+// 3. Home
+// 4. Services
+// 5. Projects
+// 6. Studio
+// 7. About
+// 8. Contact
 
 import lightTheme from "./styles/themes/lightTheme";
 
@@ -13,10 +16,37 @@ const siteName = "DESIGNER TEMPLATE";
 
 const pages = [
     { name: "PROJECTS", href: "/projects" },
-    { name: "ABOUT", href: "/about" },
+    { name: "SERVICES", href: "/services" },
+    { name: "STUDIO", href: "/studio" },
+    { name: "CONTACT", href: "/contact" },
 ];
 
-//home page
+// 2. Layout
+
+const header = {
+    buttonOne: {
+        text: "Get Started",
+        href: "https://fictionalweb.com",
+        variant: "outlined",
+    },
+};
+
+// 3. Home
+
+const heroContent = {
+    primaryText: "DESIGNER TEMPLATE",
+    secondaryText: "Created by FictionalWeb.com",
+    buttonOne: {
+        variant: "outlined",
+        href: "https://fictionalweb.com",
+        text: "Get Started",
+    },
+    buttonTwo: {
+        variant: "contained",
+        href: "https://fictionalweb.com",
+        text: "Explore",
+    },
+};
 
 const servicesPreviewContent = [
     {
@@ -48,17 +78,17 @@ const servicesPreviewContent = [
 const blockTextOne = {
     backgroundColor: "white",
     title: "BLOCK TEXT ONE",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimo!",
 };
 const blockTextTwo = {
     backgroundColor: "white",
     title: "BLOCK TEXT TWO",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimo!",
 };
 const blockTextThree = {
     backgroundColor: lightTheme.palette.background.accentLight,
     title: "BLOCK TEXT THREE",
-    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimos obcaecati incidunt repudiandae soluta inventore temporibus!",
+    body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, expedita veniam. Magni explicabo dignissimo!",
 };
 
 const mosaicSectionContentOne = {
@@ -118,6 +148,7 @@ const mosaicSectionContentThree = {
         { url: "/images/hero.jpg", alt: "alt hero text" },
     ],
 };
+
 const blockPhotoContentOne = {
     background: lightTheme.palette.background.accentLight,
     title: "BLOCK PHOTO TITLE",
@@ -129,16 +160,67 @@ const blockPhotoContentOne = {
     },
     image: { url: "/images/hero.jpg", alt: "alt hero text" },
 };
+const blockPhotoContentTwo = {
+    background: lightTheme.palette.background.accentLight,
+    title: "BLOCK PHOTO TITLE",
+    content: "Block Photo Two",
+    button: {
+        text: "Button Text",
+        href: "/about",
+        variant: "contained",
+    },
+    image: { url: "/images/hero.jpg", alt: "alt hero text" },
+};
+
+// 4. Services
+// 5. Projects
+// 6. Studio
+
+const leadProfile = {
+    image: { url: "/images/hero.jpg", alt: "alt hero text" },
+    name: "Lead Designer",
+    description:
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda. Laboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.\n\nDolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nLorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda. Laboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.\n\nDolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+};
+
+const secondaryProfiles = [
+    {
+        image: { url: "/images/hero.jpg", alt: "alt hero text" },
+        name: "Designer One",
+        description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit.\n\nQuibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque.",
+    },
+    {
+        image: { url: "/images/hero.jpg", alt: "alt hero text" },
+        name: "Designer Two",
+        description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.",
+    },
+    {
+        image: { url: "/images/hero.jpg", alt: "alt hero text" },
+        name: "Designer Three",
+        description:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam eaque nihil ipsum molestias ab quod aliquid consectetur rerum facilis ratione dignissimos fugiat, enim doloribus assumenda.\n\nLaboriosam voluptatem laudantium sequi iste nihil cupiditate sed, corporis eum natus excepturi, inventore nulla unde! Veritatis nihil culpa neque. Dolore ipsa sed asperiores voluptatibus nam modi. Dolorem hic incidunt quae tenetur quaerat animi, unde aspernatur.\n\nDolore ipsa sed asperiores voluptatibus nam modi.",
+    },
+];
+
+// 7. About
+// 8. Contact
 
 export {
     siteName,
     pages,
+    header,
+    heroContent,
     blockTextOne,
     blockTextTwo,
     blockTextThree,
     blockPhotoContentOne,
+    blockPhotoContentTwo,
     mosaicSectionContentOne,
     mosaicSectionContentTwo,
     mosaicSectionContentThree,
     servicesPreviewContent,
+    leadProfile,
+    secondaryProfiles,
 };

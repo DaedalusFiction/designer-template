@@ -7,7 +7,7 @@ import Image from "next/image";
 import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
-import { db, storage } from "../firebase";
+import { db, storage } from "../../firebase";
 import ButtonWithConfirm from "./ButtonWithConfirm";
 
 const FirebaseUploadForm = ({ config, updateCounter, setUpdateCounter }) => {

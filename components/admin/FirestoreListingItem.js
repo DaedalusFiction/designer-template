@@ -2,11 +2,11 @@ import { Box, IconButton, TextField, Typography } from "@mui/material";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { deleteObject, getStorage, ref } from "firebase/storage";
-import { db, storage } from "../firebase";
+import { db, storage } from "../../firebase";
 import { deleteDoc, doc, setDoc } from "firebase/firestore";
 import { useState } from "react";
 import ButtonWithConfirm from "./ButtonWithConfirm";
-import lightTheme from "../styles/themes/lightTheme";
+import lightTheme from "../../styles/themes/lightTheme";
 
 const FirestoreListingItem = ({
     image,

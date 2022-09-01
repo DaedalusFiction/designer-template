@@ -7,12 +7,12 @@ import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import MenuItem from "@mui/material/MenuItem";
-import { Slide, useScrollTrigger } from "@mui/material";
+import { Button, Slide, useScrollTrigger } from "@mui/material";
 import Link from "next/link";
-import lightTheme from "../styles/themes/lightTheme";
+import lightTheme from "../../styles/themes/lightTheme";
 import { useState } from "react";
-import { navigateToTop } from "../utility/navigateToTop";
-import { pages, siteName } from "../siteInfo";
+import { navigateToTop } from "../../utility/navigateToTop";
+import { pages, siteName, header } from "../../siteInfo";
 
 const activeStyle = {
     color: lightTheme.palette.custom.light,
@@ -135,36 +135,47 @@ const Header = () => {
                             sx={{
                                 flexGrow: 1,
                                 display: { xs: "none", md: "flex" },
+                                justifyContent: "space-between",
                             }}
                         >
-                            {pages.map((page, index) => (
-                                <Typography
-                                    className="nav-link"
-                                    key={index}
-                                    onClick={() => {
-                                        navigateToTop();
-                                    }}
-                                    //separate styling because can't get NavLink working with hover
-                                    sx={{
-                                        margin: "0 1em",
-                                        "&:hover": {
-                                            color: lightTheme.palette.custom
-                                                .dark,
-                                        },
-                                    }}
-                                >
-                                    <Link
-                                        href={page.href}
-                                        style={({ isActive }) =>
-                                            isActive
-                                                ? activeStyle
-                                                : inactiveStyle
-                                        }
+                            <Box sx={{ display: "flex", alignItems: "center" }}>
+                                {pages.map((page, index) => (
+                                    <Typography
+                                        className="nav-link"
+                                        key={index}
+                                        onClick={() => {
+                                            navigateToTop();
+                                        }}
+                                        //separate styling because can't get NavLink working with hover
+                                        sx={{
+                                            margin: "0 1em",
+                                            "&:hover": {
+                                                color: lightTheme.palette.custom
+                                                    .dark,
+                                            },
+                                        }}
                                     >
-                                        {page.name}
-                                    </Link>
-                                </Typography>
-                            ))}
+                                        <Link
+                                            href={page.href}
+                                            style={({ isActive }) =>
+                                                isActive
+                                                    ? activeStyle
+                                                    : inactiveStyle
+                                            }
+                                        >
+                                            {page.name}
+                                        </Link>
+                                    </Typography>
+                                ))}
+                            </Box>
+                            <Link href={header.buttonOne.href}>
+                                <Button
+                                    color="secondary"
+                                    variant={header.buttonOne.variant}
+                                >
+                                    {header.buttonOne.text}
+                                </Button>
+                            </Link>
                         </Box>
                     </Toolbar>
                 </Container>

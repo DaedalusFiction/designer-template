@@ -1,6 +1,6 @@
 import { Box, Input, Typography } from "@mui/material";
 import React, { useState } from "react";
-import useGetImages from "../hooks/useGetImages";
+import useGetImages from "../../hooks/useGetImages";
 import FirestoreListingItem from "./FirestoreListingItem";
 
 const FirestoreListing = ({ category, updateCounter, setUpdateCounter }) => {
