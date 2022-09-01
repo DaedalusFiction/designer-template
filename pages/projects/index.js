@@ -3,26 +3,18 @@ import { collection, getDocs } from "firebase/firestore";
 import React from "react";
 import Gallery from "../../components/gallery/Gallery";
 import { db } from "../../firebase";
+import PageLayout from "../../components/layout/PageLayout";
 
 const Projects = ({ images }) => {
     return (
-        <Container maxWidth="xl">
-            <Box>
-                <Typography variant="h1" sx={{ margin: ".5rem 0" }}>
-                    Projects
-                </Typography>
-                <Typography sx={{ paddingBottom: "2em" }}>
-                    UNIQUELY CRAFTED LIVING SPACES
-                </Typography>
-            </Box>
-            <br />
+        <PageLayout name="OUR WORK">
             <Gallery images={images} category="artwork" />
-        </Container>
+        </PageLayout>
     );
 };
 
 export const getStaticProps = async () => {
-    const docsSnap = await getDocs(collection(db, "gallery"));
+    const docsSnap = await getDocs(collection(db, "projects"));
     let images = [];
     docsSnap.docs.forEach((doc, index) => {
         images = [...images, doc.data()];

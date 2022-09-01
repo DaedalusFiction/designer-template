@@ -5,8 +5,8 @@ import Head from "next/head";
 import login from "../../utility/login.js";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase.js";
-import FirebaseUploadForm from "../../components/FirebaseUploadForm.js";
-import FirestoreListing from "../../components/FirestoreListing.js";
+import FirebaseUploadForm from "../../components/admin/FirebaseUploadForm.js";
+import FirestoreListing from "../../components/admin/FirestoreListing.js";
 
 const galleryConfig = {
     category: "projects",
@@ -22,23 +22,6 @@ const galleryConfig = {
         { name: "Year", type: "number", value: "" },
     ],
 };
-
-// const clothingConfig = {
-//     category: "clothing",
-//     fields: [
-//         { name: "Title", type: "text", value: "" },
-//         {
-//             name: "Description",
-//             type: "text",
-//             value: "",
-//             multiline: true,
-//             rows: 4,
-//         },
-//         { name: "Year", type: "number", value: "" },
-//         { name: "Price", type: "number", value: "" },
-//         { name: "Medium", type: "text", value: "" },
-//     ],
-// };
 
 const Admin = () => {
     const [isAdmin, setIsAdmin] = useState(false);

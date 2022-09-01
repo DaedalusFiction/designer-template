@@ -24,10 +24,7 @@ const Post = () => {
         }
     }, [params.id, category, router.pathname]);
     return (
-        <Box>
-            <Typography variant="h1" sx={{ margin: ".5rem 0" }}>
-                {params.id}
-            </Typography>
+        <Box className="section">
             {image && (
                 <Grid container spacing={4}>
                     <Grid item xs={12} md={8}>

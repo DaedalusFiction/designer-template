@@ -1,14 +1,13 @@
-import { Container } from "@mui/material";
 import React from "react";
-import { getStaticProps } from ".";
+import PageLayout from "../../components/layout/PageLayout";
 import Post from "../../components/Post";
 
-const artImage = () => {
+const project = () => {
     return (
-        <Container maxWidth="xl">
+        <PageLayout name="PROJECT">
             <Post />
-        </Container>
+        </PageLayout>
     );
 };
 
-export default artImage;
+export default project;
