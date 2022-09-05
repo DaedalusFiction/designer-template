@@ -5,7 +5,7 @@ import lightTheme from "../../styles/themes/lightTheme";
 import { pages, siteName, heroContent } from "../../siteInfo";
 import Header from "../layout/Header";
 
-const heroImage = "/images/hero.jpg";
+const heroImage = "/images/hero.webp";
 
 const Hero = () => {
     return (
