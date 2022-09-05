@@ -8,7 +8,7 @@ import PageLayout from "../../components/layout/PageLayout";
 const Projects = ({ images }) => {
     return (
         <PageLayout name="OUR WORK">
-            <Gallery images={images} category="artwork" />
+            <Gallery images={images} category="projects" />
         </PageLayout>
     );
 };
