@@ -2,9 +2,8 @@ import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { doc, getDoc } from "firebase/firestore";
 import Image from "next/image";
-import React, { useState } from "react";
+import { useState } from "react";
 import PageLayout from "../../../components/layout/PageLayout";
-import Post from "../../../components/Post";
 import { db } from "../../../firebase";
 
 const Project = ({ image }) => {

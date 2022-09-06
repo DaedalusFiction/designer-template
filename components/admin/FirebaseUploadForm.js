@@ -1,14 +1,13 @@
-import { DocumentScanner } from "@mui/icons-material";
 import { Button, Grid, Input, TextField, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import { addDoc, collection, doc, getDoc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import { getDownloadURL, ref, uploadBytesResumable } from "firebase/storage";
 import Image from "next/image";
 import React from "react";
 import { useRef } from "react";
 import { useState } from "react";
 import { db, storage } from "../../firebase";
-import ButtonWithConfirm from "./ButtonWithConfirm";
+import ButtonWithConfirm from "../general/ButtonWithConfirm";
 
 const FirebaseUploadForm = ({ config, updateCounter, setUpdateCounter }) => {
   const [formData, setFormData] = useState(JSON.parse(JSON.stringify(config)));
@@ -237,7 +236,7 @@ const FirebaseUploadForm = ({ config, updateCounter, setUpdateCounter }) => {
         isDisabled={isUploading}
         buttonText="Upload"
         dialogText="Are you sure you want to upload this item?"
-        notificationText="File Successfully Uploaded!"
+        notificationText="File Uploading..."
       />
       {fileError !== "false" && <Typography>{fileError}</Typography>}
     </Box>

@@ -1,6 +1,6 @@
 import { Button, Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import { useState } from "react";
 import Head from "next/head";
 import login from "../../utility/login.js";
 import { doc, getDoc } from "firebase/firestore";

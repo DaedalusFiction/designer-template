@@ -1,6 +1,4 @@
-import { Box, Container, Typography } from "@mui/material";
 import { collection, getDocs } from "firebase/firestore";
-import React from "react";
 import Gallery from "../../../components/gallery/Gallery";
 import { db } from "../../../firebase";
 import PageLayout from "../../../components/layout/PageLayout";
