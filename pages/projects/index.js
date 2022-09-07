@@ -17,34 +17,37 @@ const Projects = () => {
             <Grid key={index} item xs={12} sm={6} md={4}>
               <Link href={galleryConfig.href}>
                 <Box sx={{ position: "relative" }}>
+                  <SizedImage
+                    image={galleryConfig.image}
+                    height="25rem"
+                    width="100%"
+                  />
                   <Box
-                    className="link"
-                    sx={{
-                      transition: "300ms",
-                      "&:hover": { filter: "brightness(60%)" },
-                    }}
-                  >
-                    <SizedImage
-                      image={galleryConfig.image}
-                      height="25rem"
-                      width="100%"
-                    />
-                  </Box>
-                  <Typography
-                    variant="h4"
                     sx={{
                       position: "absolute",
-                      textTransform: "uppercase",
-                      fontWeight: "600",
-                      top: "50%",
-                      left: "0",
-                      textAlign: "center",
+                      top: "0",
+                      height: "100%",
                       width: "100%",
-                      color: lightTheme.palette.custom.light,
+                      backgroundColor: "rgba(0, 0, 0, 0.2)",
+                      left: "0",
+                      opacity: "0",
+                      transition: "300ms",
+                      "&:hover": {
+                        opacity: "100%",
+                      },
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      cursor: "pointer",
                     }}
                   >
-                    {galleryConfig.category}
-                  </Typography>
+                    <Typography
+                      variant="h4"
+                      sx={{ color: "white", textTransform: "uppercase" }}
+                    >
+                      {galleryConfig.category}
+                    </Typography>
+                  </Box>
                 </Box>
               </Link>
             </Grid>
