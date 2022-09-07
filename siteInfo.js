@@ -214,6 +214,23 @@ const galleryConfigs = [
       { name: "Year", type: "number", value: "" },
     ],
   },
+  {
+    category: "goats",
+    href: "/projects/goats",
+    image: { url: "/images/hero.webp", alt: "alt hero text" },
+    fields: [
+      { name: "Title", type: "text", value: "" },
+
+      {
+        name: "Description",
+        type: "text",
+        value: "",
+        multiline: true,
+        rows: 4,
+      },
+      { name: "Year", type: "number", value: "" },
+    ],
+  },
 ];
 
 // 6. Studio
