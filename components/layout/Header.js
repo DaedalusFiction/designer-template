@@ -11,12 +11,12 @@ const Header = ({ light }) => {
         sx={{
           justifyContent: "space-between",
           padding: ".5em 0",
-          display: { xs: "none", md: "flex" },
+          display: { xs: "none", lg: "flex" },
         }}
       >
         <Box
           sx={{
-            display: { xs: "none", md: "flex" },
+            display: { xs: "none", lg: "flex" },
             alignItems: "center",
             gap: "1.5em",
           }}

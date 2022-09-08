@@ -10,14 +10,53 @@ import Gallery from "../../../components/gallery/Gallery";
 import { db } from "../../../firebase";
 import PageLayout from "../../../components/layout/PageLayout";
 import { useRouter } from "next/router";
-import { Button } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { useState } from "react";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import { Box } from "@mui/system";
 
 const Project = ({ images, category }) => {
   const router = useRouter();
   const { gallery } = router.query;
   const [firstImage, setFirstImage] = useState(0);
   const [pageLimit, setPageLimit] = useState(20);
+
+  const PaginationBar = () => {
+    return (
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "1em",
+          margin: "2em 0",
+        }}
+      >
+        {firstImage > -110 && (
+          <Button
+            color="secondary"
+            startIcon={<ArrowBackIosIcon />}
+            onClick={handlePreviousPage}
+          >
+            Previous Page
+          </Button>
+        )}
+        <Typography variant="subtitle1" sx={{}}>
+          {firstImage} - {Math.min(firstImage + pageLimit, images.length)} of{" "}
+          {images.length}
+        </Typography>
+        {firstImage + pageLimit < images.length + 100 && (
+          <Button
+            color="secondary"
+            endIcon={<ArrowForwardIosIcon />}
+            onClick={handleNextPage}
+          >
+            Next Page
+          </Button>
+        )}
+      </Box>
+    );
+  };
 
   const handleNextPage = () => {
     setFirstImage(firstImage + 1);
@@ -28,20 +67,12 @@ const Project = ({ images, category }) => {
 
   return (
     <PageLayout name={gallery}>
+      <PaginationBar />
       <Gallery
         images={images.slice(firstImage, firstImage + pageLimit)}
         category="projects"
       />
-      {firstImage > 0 && (
-        <Button color="secondary" onClick={handlePreviousPage}>
-          Previous Page
-        </Button>
-      )}
-      {firstImage + pageLimit < images.length && (
-        <Button color="secondary" onClick={handleNextPage}>
-          Next Page
-        </Button>
-      )}
+      <PaginationBar />
     </PageLayout>
   );
 };
