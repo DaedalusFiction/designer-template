@@ -32,7 +32,7 @@ const Project = ({ images, category }) => {
           margin: "2em 0",
         }}
       >
-        {firstImage > -110 && (
+        {firstImage > 0 && (
           <Button
             color="secondary"
             startIcon={<ArrowBackIosIcon />}
@@ -42,10 +42,10 @@ const Project = ({ images, category }) => {
           </Button>
         )}
         <Typography variant="subtitle1" sx={{}}>
-          {firstImage} - {Math.min(firstImage + pageLimit, images.length)} of{" "}
-          {images.length}
+          {firstImage + 1} - {Math.min(firstImage + pageLimit, images.length)}{" "}
+          of {images.length}
         </Typography>
-        {firstImage + pageLimit < images.length + 100 && (
+        {firstImage + pageLimit < images.length && (
           <Button
             color="secondary"
             endIcon={<ArrowForwardIosIcon />}
@@ -59,10 +59,10 @@ const Project = ({ images, category }) => {
   };
 
   const handleNextPage = () => {
-    setFirstImage(firstImage + 1);
+    setFirstImage(Math.min(firstImage + pageLimit, images.length - 1));
   };
   const handlePreviousPage = () => {
-    setFirstImage(firstImage - 1);
+    setFirstImage(Math.max(firstImage - pageLimit, 0));
   };
 
   return (
