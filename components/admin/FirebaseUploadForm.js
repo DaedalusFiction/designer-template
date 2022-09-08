@@ -132,7 +132,7 @@ const FirebaseUploadForm = ({ config, updateCounter, setUpdateCounter }) => {
                     ...formData,
                     id: formData.fields[0].value,
                     URLs: downloadURLs,
-                    uploaded: Date.now(),
+                    dateUploaded: Date.now(),
                   }
                 );
               }

@@ -231,6 +231,40 @@ const galleryConfigs = [
       { name: "Year", type: "number", value: "" },
     ],
   },
+  {
+    category: "sports",
+    href: "/projects/sports",
+    image: { url: "/images/hero.webp", alt: "alt hero text" },
+    fields: [
+      { name: "Title", type: "text", value: "" },
+
+      {
+        name: "Description",
+        type: "text",
+        value: "",
+        multiline: true,
+        rows: 4,
+      },
+      { name: "Year", type: "number", value: "" },
+    ],
+  },
+  {
+    category: "illustrations",
+    href: "/projects/illustrations",
+    image: { url: "/images/hero.webp", alt: "alt hero text" },
+    fields: [
+      { name: "Title", type: "text", value: "" },
+
+      {
+        name: "Description",
+        type: "text",
+        value: "",
+        multiline: true,
+        rows: 4,
+      },
+      { name: "Year", type: "number", value: "" },
+    ],
+  },
 ];
 
 // 6. Studio

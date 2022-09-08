@@ -1,12 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  collection,
-  query,
-  orderBy,
-  limit,
-  getDocs,
-  startAfter,
-} from "firebase/firestore";
+import { collection, query, orderBy, getDocs } from "firebase/firestore";
 import { db } from "../firebase";
 
 function useGetImages(category, updateCounter, lastVisible) {
@@ -15,6 +8,7 @@ function useGetImages(category, updateCounter, lastVisible) {
   useEffect(() => {
     async function getImages() {
       const q = query(
+        //change this based on Firebase file structure
         collection(db, `projects/${category}/images`),
         orderBy("uploaded", "desc")
       );
@@ -23,7 +17,6 @@ function useGetImages(category, updateCounter, lastVisible) {
       let newImages = [];
       docsSnap.docs.forEach((doc, index) => {
         newImages = [...newImages, doc];
-        // console.log(doc.data());
       });
       setImages(newImages);
     }
