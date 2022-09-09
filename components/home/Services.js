@@ -1,16 +1,17 @@
 import { Box, Container, Grid } from "@mui/material";
 import React from "react";
-import ServicesPreviewItem from "./ServicesPreviewItem";
+import Service from "./Service";
+import {servicesContent} from "../../siteInfo"
 
-const ServicesPreview = ({ servicesPreviewContent }) => {
+const Services = ({preview}) => {
     return (
         <Box className="section">
             <Container maxWidth="lg">
                 <Grid container spacing={4}>
-                    {servicesPreviewContent.map((service, index) => {
+                    {servicesContent.map((service, index) => {
                         return (
                             <Grid key={index} item xs={12} md={4}>
-                                <ServicesPreviewItem service={service} />
+                                <Service preview={preview} service={service} />
                             </Grid>
                         );
                     })}
@@ -20,4 +21,4 @@ const ServicesPreview = ({ servicesPreviewContent }) => {
     );
 };
 
-export default ServicesPreview;
+export default Services;

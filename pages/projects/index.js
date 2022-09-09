@@ -28,7 +28,7 @@ const Projects = () => {
                       top: "0",
                       height: "100%",
                       width: "100%",
-                      backgroundColor: "rgba(0, 0, 0, 0.2)",
+                      backgroundColor: "rgba(0, 0, 0, 0.4)",
                       left: "0",
                       opacity: "0",
                       transition: "300ms",
@@ -42,7 +42,7 @@ const Projects = () => {
                     }}
                   >
                     <Typography
-                      variant="h4"
+                      variant="h3"
                       sx={{ color: "white", textTransform: "uppercase" }}
                     >
                       {galleryConfig.category}

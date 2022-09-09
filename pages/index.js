@@ -1,7 +1,7 @@
 import BlockPhoto from "../components/general/BlockPhoto";
 import BlockText from "../components/general/BlockText";
 import Hero from "../components/home/Hero";
-import ServicesPreview from "../components/home/ServicesPreview";
+import Services from "../components/home/Services";
 import Meta from "../components/home/Meta";
 import MosaicSection from "../components/mosaic/MosaicSection";
 
@@ -14,7 +14,6 @@ import {
   mosaicSectionContentOne,
   mosaicSectionContentTwo,
   mosaicSectionContentThree,
-  servicesPreviewContent,
   blockPhotoContentTwo,
 } from "../siteInfo";
 
@@ -28,7 +27,7 @@ export default function Home() {
         mosaicSectionContent={mosaicSectionContentOne}
         variation={1}
       />
-      <ServicesPreview servicesPreviewContent={servicesPreviewContent} />
+      <Services preview/>
       <BlockPhoto blockPhotoContent={blockPhotoContentOne} reverse />
       <BlockText text={blockTextTwo} />
       <BlockPhoto blockPhotoContent={blockPhotoContentTwo} />

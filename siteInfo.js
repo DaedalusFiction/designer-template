@@ -52,7 +52,7 @@ const heroContent = {
   },
 };
 
-const servicesPreviewContent = [
+const servicesContent = [
   {
     title: "Service One",
     price: "$200",
@@ -60,6 +60,11 @@ const servicesPreviewContent = [
       "This is the sample description for the service. It is a very good description and a very good service",
     image: { url: "/images/hero.webp", alt: "alt hero text" },
     button: { text: "Book Now!", href: "/" },
+    features: [
+      { primaryText: "Feature One", secondaryText: "Feature Description" },
+      { primaryText: "Feature Two", secondaryText: "Feature Description" },
+      { primaryText: "Feature Three", secondaryText: "Feature Description" },
+    ],
   },
   {
     title: "Service Two",
@@ -68,6 +73,7 @@ const servicesPreviewContent = [
       "This is the sample description for the service. It is a very good description and a very good service",
     image: { url: "/images/hero.webp", alt: "alt hero text" },
     button: { text: "Book Now!", href: "/" },
+    features: ["Feature One", "Feature Two", "Feature Three"],
   },
   {
     title: "Service Three",
@@ -76,6 +82,7 @@ const servicesPreviewContent = [
       "This is the sample description for the service. It is a very good description and a very good service",
     image: { url: "/images/hero.webp", alt: "alt hero text" },
     button: { text: "Book Now!", href: "/" },
+    features: ["Feature One", "Feature Two", "Feature Three", "Feature Four"],
   },
 ];
 
@@ -350,7 +357,7 @@ export {
   mosaicSectionContentOne,
   mosaicSectionContentTwo,
   mosaicSectionContentThree,
-  servicesPreviewContent,
+  servicesContent,
   leadProfile,
   secondaryProfiles,
   processSteps,
