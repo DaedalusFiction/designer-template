@@ -73,7 +73,12 @@ const servicesContent = [
       "This is the sample description for the service. It is a very good description and a very good service",
     image: { url: "/images/hero.webp", alt: "alt hero text" },
     button: { text: "Book Now!", href: "/" },
-    features: ["Feature One", "Feature Two", "Feature Three"],
+    features: [
+      { primaryText: "Feature One", secondaryText: "Feature Description" },
+      { primaryText: "Feature Two", secondaryText: "Feature Description" },
+      { primaryText: "Feature Three", secondaryText: "Feature Description" },
+      { primaryText: "Feature Four", secondaryText: "Feature Description" },
+    ],
   },
   {
     title: "Service Three",
@@ -82,7 +87,14 @@ const servicesContent = [
       "This is the sample description for the service. It is a very good description and a very good service",
     image: { url: "/images/hero.webp", alt: "alt hero text" },
     button: { text: "Book Now!", href: "/" },
-    features: ["Feature One", "Feature Two", "Feature Three", "Feature Four"],
+    features: [
+      { primaryText: "Feature One", secondaryText: "Feature Description" },
+      { primaryText: "Feature Two", secondaryText: "Feature Description" },
+      { primaryText: "Feature Three", secondaryText: "Feature Description" },
+      { primaryText: "Feature Four", secondaryText: "Feature Description" },
+      { primaryText: "Feature Five", secondaryText: "Feature Description" },
+      { primaryText: "Feature Six", secondaryText: "Feature Description" },
+    ],
   },
 ];
 
